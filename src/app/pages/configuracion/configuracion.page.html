@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="ion-padding">
+ 
+  <ion-item>
+    <ion-label>
+      ¿Permitir borrar citas en el inicio?
+    </ion-label>
+    <ion-toggle
+      [(ngModel)]="permitirBorrar"
+      (ionChange)="onCambioPermiso()">
+    </ion-toggle>
+  </ion-item>
+ 
+</ion-content>

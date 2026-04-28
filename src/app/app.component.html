@@ -1,0 +1,21 @@
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+ 
+  <!-- Barra de navegación inferior -->
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button routerLink="/home">
+        <ion-icon name="home-outline" slot="start"></ion-icon>
+        Inicio
+      </ion-button>
+      <ion-button routerLink="/gestion">
+        <ion-icon name="list-outline" slot="start"></ion-icon>
+        Gestión
+      </ion-button>
+      <ion-button routerLink="/configuracion">
+        <ion-icon name="settings-outline" slot="start"></ion-icon>
+        Config
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-app>

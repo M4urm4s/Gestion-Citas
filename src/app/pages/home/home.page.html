@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cita del Momento</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="ion-padding">
+ 
+  <!-- Uso del componente reutilizable CitaComponent -->
+  <!-- [cita] = @Input: pasa la cita aleatoria -->
+  <!-- [mostrarBorrar] = @Input: según configuración -->
+  <!-- (eliminarCita) = @Output: captura eliminación -->
+  <app-cita
+    *ngIf="citaAleatoria"
+    [cita]="citaAleatoria"
+    [mostrarBorrar]="permitirBorrar"
+    (eliminarCita)="onEliminarCita($event)">
+  </app-cita>
+ 
+  <!-- Botón para obtener otra cita aleatoria -->
+  <ion-button expand="block"
+    (click)="cargarCitaAleatoria()">
+    <ion-icon name="refresh-outline" slot="start">
+    </ion-icon>
+    Otra Cita
+  </ion-button>
+ 
+  <p *ngIf="!citaAleatoria">
+    No hay citas disponibles.
+  </p>
+ 
+</ion-content>

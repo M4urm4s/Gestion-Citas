@@ -1,0 +1,17 @@
+<ion-card>
+  <ion-card-header>
+    <!-- Muestra la frase de la cita entre comillas -->
+    <ion-card-title>"{{ cita.frase }}"</ion-card-title>
+    <!-- Muestra el autor precedido de guión largo -->
+    <ion-card-subtitle>— {{ cita.autor }}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <!-- Botón visible solo si mostrarBorrar es true -->
+    <ion-button *ngIf="mostrarBorrar" color="danger"
+               (click)="onEliminar()">
+      <ion-icon name="trash-outline" slot="start">
+      </ion-icon>
+      Eliminar
+    </ion-button>
+  </ion-card-content>
+</ion-card>
